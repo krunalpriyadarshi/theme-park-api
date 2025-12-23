@@ -1,10 +1,11 @@
 plugins{
-    id 'java'
+    id 'war'
     id 'org.springframework.boot' version '2.5.4'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -15,5 +16,7 @@ java{
 }
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation('org.springframework.boot:spring-boot-starter-web')
+
+    implementation 'com.krunal:kruzThemePark:1.0-SNAPSHOT'
 }
